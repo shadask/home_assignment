@@ -2,7 +2,7 @@
 
 ## Getting Started
 
-Run the following in order to get the db container up and running:
+Navigate to the project's folder and run the following in order to get the db container up and running:
 
 ```bash
 docker-compose up
