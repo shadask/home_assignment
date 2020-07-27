@@ -1,0 +1,27 @@
+<%= form_for(word_statistic) do |f| %>
+  <% if word_statistic.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(word_statistic.errors.count, "error") %> prohibited this word_statistic from being saved:</h2>
+
+      <ul>
+      <% word_statistic.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :word %>
+    <%= f.text_field :word %>
+  </div>
+
+  <div class="field">
+    <%= f.label :count %>
+    <%= f.number_field :count %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,2 @@
+class WordCounter < ApplicationRecord
+end

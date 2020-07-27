@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HomeTask</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag "style.css" %>
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="logo">Hello There!</div>
+      <div>
+        <%= link_to 'Words List', word_statistics_path %>
+      </div>
+      <div>
+        <%= link_to 'Insert a new input', word_counters_path %>
+      </div>
+    </div>
+    <div class="app-body">
+    <h1>Count on us to count your words</h1>
+      <%= yield %>
+    </div>
+  </body>
+</html>

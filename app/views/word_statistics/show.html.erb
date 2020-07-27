@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Word:</strong>
+  <%= @word_statistic.word %>
+</p>
+
+<p>
+  <strong>Count:</strong>
+  <%= @word_statistic.count %>
+</p>
+
+<%= link_to 'Edit', edit_word_statistic_path(@word_statistic) %> |
+<%= link_to 'Back', word_statistics_path %>

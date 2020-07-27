@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+
+<h3>Search or browse the list below to see how many times a word appeared so far</h3>
+ 
+  <%= form_tag(word_statistics_path, method: :get,:class=>"form-container") do %>
+    <%= text_field_tag(:search, params[:search],:class=>"text-input")%>
+      <%= submit_tag("Go", :class=>"submit-button") %>
+      <% end %>
+<table>
+  <thead>
+    <tr>
+      <th>Word</th>
+      <th>Count</th>
+     </tr>
+  </thead>
+
+  <tbody>
+    <% @word_statistics.each do |word_statistic| %>
+      <tr>
+        <td><%= word_statistic.word %></td>
+        <td><%= word_statistic.count %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Go ahead and add more words!', word_statistics_path %>

@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+
+<h3>Your words are important to us</h3>
+
+<%= form_for :word_counter, url: word_counters_path do |f|  %>
+<div class="form-container">
+   <%= f.text_field :input ,placeholder: "Enter text, file path or a URL...", :class => 'text-input'%>
+   <%= f.submit "Count" , :class => 'submit-button'%> 
+   </div>
+<% end %>
+<br>
+

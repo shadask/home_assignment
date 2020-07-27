@@ -1,0 +1,22 @@
+<%= form_for(word_counter) do |f| %>
+  <% if word_counter.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(word_counter.errors.count, "error") %> prohibited this word_counter from being saved:</h2>
+
+      <ul>
+      <% word_counter.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :input %>
+    <%= f.text_field :input %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
